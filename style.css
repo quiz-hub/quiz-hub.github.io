@@ -1,0 +1,364 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Body Styling */
+  body {
+    background: linear-gradient(135deg, #f06, #48c6ef); /* Gradient background */
+    color: #fff;
+    height: calc(100vh);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-size: cover;
+  }
+  
+  /* Header (Navbar) Styling */
+  header {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent dark background */
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 15px;
+    z-index: 100;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav .logo a {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+  }
+  
+  nav .logo a:hover {
+    color: #48c6ef;
+  }
+  
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  ul li {
+    padding: 10px 20px;
+  }
+  
+  ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  
+  ul li a:hover {
+    color: #48c6ef;
+  }
+  
+  /* Main Section Styling */
+  main {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px; /* Adjust to give space below navbar */
+  }
+  
+  /* Intro Section Styling */
+  .intro {
+    background: rgba(0, 0, 0, 0.5); /* Transparent background for text */
+    padding: 40px 20px;
+    border-radius: 15px;
+    max-width: 600px;
+    width: 80%;
+  }
+  
+  .intro h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in;
+  }
+  
+  .intro p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    animation: fadeIn 2s ease-in;
+  }
+  
+  /* About and Instructions Section Styling */
+  .about, .instructions {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px 20px;
+    margin: 20px;
+    border-radius: 15px;
+    max-width: 600px;
+    width: 80%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Subtle box-shadow */
+    text-align: center;
+  }
+  
+  .about h1, .instructions h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in;
+  }
+  
+  .about p, .instructions p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in;
+  }
+  
+  /* Button Styling */
+  .cta-btn {
+    background-color: #48c6ef;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: transform 0.3s ease;
+  }
+  
+  .cta-btn:hover {
+    transform: scale(1.1);
+  }
+
+/* Side Banner Styling */
+.side-banner {
+  position: fixed;
+  right: 20px;
+  top: 100px; /* Adjust the distance from the top */
+  width: 300px;
+  height: 600px;
+  background-color: #fff; /* Optional: background color */
+  padding: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  display: block;
+}
+
+  
+  /* Footer Styling */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 1rem;
+  }
+  
+  /* FadeIn Animation */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    /* Navbar Adjustments */
+    nav .logo a {
+      font-size: 1.5rem;
+    }
+  
+    ul li a {
+      font-size: 1rem;
+    }
+  
+    /* Main Section */
+    .intro {
+      padding: 30px 15px;
+    }
+  
+    .intro h1 {
+      font-size: 2.5rem;
+    }
+  
+    .intro p {
+      font-size: 1.2rem;
+    }
+  
+    /* About and Instructions Section */
+    .about, .instructions {
+      padding: 20px 15px;
+      margin: 10px;
+    }
+  
+    .about h1, .instructions h2 {
+      font-size: 2rem;
+    }
+  
+    .about p, .instructions p {
+      font-size: 1.2rem;
+    }
+  
+    /* Button */
+    .cta-btn {
+      font-size: 1rem;
+      padding: 12px 25px;
+    }
+  }
+
+  /* Quizzes Page Styling */
+.quiz-container {
+    width: 100%;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .quiz-container h1 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    animation: fadeIn 1s ease-in;
+  }
+  
+  /* Quiz List Styling */
+  .quiz-list {
+    display: flex;
+    flex-direction: column; /* Stack items in a column */
+    gap: 20px;
+    margin-top: 20px;
+    align-items: center; /* Center the quiz boxes */
+  }
+  
+  .quiz-tile {
+    background: rgba(0, 0, 0, 0.7); /* Transparent background for the tile */
+    padding: 30px 20px;
+    border-radius: 15px;
+    width: 80%; /* Ensure the box doesn't stretch too wide */
+    max-width: 600px; /* Limit width for larger screens */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Subtle box-shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .quiz-tile:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  .quiz-tile h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .quiz-tile p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .start-btn {
+    background-color: #48c6ef;
+    color: #fff;
+    padding: 10px 25px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: transform 0.3s ease;
+  }
+  
+  .start-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    /* Quizzes Section */
+    .quiz-container h1 {
+      font-size: 2.5rem;
+    }
+  
+    .quiz-tile {
+      padding: 20px 15px;
+    }
+  
+    .quiz-tile h3 {
+      font-size: 1.8rem;
+    }
+  
+    .quiz-tile p {
+      font-size: 1rem;
+    }
+  
+    .start-btn {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+  }
+
+/* Collapsible Category Header */
+.category summary {
+    font-size: 1.5rem;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.7); /* Match the tile's background color */
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    text-align: left;
+    width: 50%;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Add subtle shadow for emphasis */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.category summary:hover {
+    background-color: #33a3c9; /* Highlight on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Quiz List Styling */
+.category-content {
+    display: none; /* Initially hidden */
+    padding-left: 20px;
+    animation: fadeIn 0.3s ease-in-out; /* Smooth fade-in effect when showing content */
+}
+
+.category[open] .category-content {
+    display: block; /* Show content when category is expanded */
+    animation: fadeIn 0.5s ease-in-out; /* Fade-in effect for category expansion */
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Additional styling for summary (category header) */
+.category summary {
+    font-size: 1.2rem;
+    padding: 12px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .category summary {
+        font-size: 1.3rem;
+        padding: 15px;
+    }
+}
+  
+  
